@@ -10,14 +10,40 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(./assets/bg.jpg);
-  -webkit-background-size: 100% 120%;
-  background-size: 100% 120%;
-  background-position: center center;
-  -webkit-background-origin: content-box;
-  background-origin: content-box;
+  background-color: #14272e;
 }
-
+.container{
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 476px;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px #2a4955 inset, 0 0 9px 6px #2a4955;
+}
+@media (max-width: 561px) {
+  .container{
+    width: 100%;
+    height: 90vh;
+    box-shadow: 0 0 20px 20px #2a4955 inset,
+                0 0 9px 6px #2a4955;
+  }
+}
+@media (max-width: 470px) {
+  .container{
+    width: 100%;
+    height: 80vh;
+    box-shadow: 0 0 20px 20px #2a4955 inset,
+                0 0 9px 6px #2a4955;
+  }
+  .counter.white{
+    max-height: 300px;
+  }
+}
 @media screen and (min-width: 400px) {
   .counter.active::before {
     font-size: 20pt;
@@ -82,7 +108,7 @@ body {
 
 .counter .reset-btn {
   position: absolute;
-  top: 52%;
+  top: 49%;
   left: 68%;
   display: inline-block;
   background-image: url(./assets/button.png);
@@ -134,6 +160,9 @@ body {
 
 .counter.white {
   background-image: url(./assets/white.png);
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
+  max-width: 600px;
 }
 .counter.white::before {
   background-color: #EEEEEE;
