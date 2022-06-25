@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #14272e;
+}
+.container{
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 476px;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px #2a4955 inset, 0 0 9px 6px #2a4955;
+}
+@media (max-width: 561px) {
+  .container{
+    width: 100%;
+    height: 90vh;
+    box-shadow: 0 0 20px 20px #2a4955 inset,
+                0 0 9px 6px #2a4955;
+  }
+}
+@media (max-width: 470px) {
+  .container{
+    width: 100%;
+    height: 80vh;
+    box-shadow: 0 0 20px 20px #2a4955 inset,
+                0 0 9px 6px #2a4955;
+  }
+  .counter.white{
+    max-height: 300px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .counter.active::before {
+    font-size: 20pt;
+  }
+  .counter .screen .score {
+    margin-right: 40px;
+    font-size: 70pt;
+  }
+  .counter .screen .goal {
+    font-size: 40pt;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+}
+
+.counter {
+  margin-top: 10%;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  background-size: 100% 100%;
+  width: 70vw;
+  height: 60vh;
+}
+
+.counter::before {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  text-align: center;
+  padding: 4px 0px;
+  border-radius: 10px;
+  top: -12%;
+  transform: scale(0);
+  transition: .2s;
+  width: 120%;
+  font-size: 10pt;
+  transform-origin: bottom;
+  font-family: 'Amiri', serif;
+}
+.counter.active::before {
+  transform: scale(1);
+}
+
+
+.counter .counter-btn {
+  display: inline-block;
+  background-image: url(./assets/button.png);
+  background-size: 100% 100%;
+  width: 45%;
+  height: 35%;
+  border: none;
+  align-self: end;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-bottom: 10%;
+}
+
+.counter .counter-btn:active {
+  filter: opacity(70%);
+}
+
+.counter .reset-btn {
+  position: absolute;
+  top: 49%;
+  left: 68%;
+  display: inline-block;
+  background-image: url(./assets/button.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  border: none;
+  align-self: center;
+  width: 13%;
+  height: 11%;
+  background-color: transparent;
+}
+
+.counter .reset-btn:active {
+  filter: opacity(70%);
+}
+
+.counter .screen {
+  display: inline-flex;
+  flex-flow: row wrap;
+  direction: rtl;
+  position: absolute;
+  top: 17%;
+  left: 14%;
+  width: 72.5%;
+  height: 23%;
+  border-radius: 5px;
+  font-family: 'Digital', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.counter .screen .score {
+  display: block;
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  font-size: clamp(20pt, 30pt, 50pt);
+}
+
+.counter .screen .goal {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  justify-self: start;
+  margin-top: 10px;
+  font-size: 10pt;
+}
+
+.counter.white {
+  background-image: url(./assets/white.png);
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
+  max-width: 600px;
+}
+.counter.white::before {
+  background-color: #EEEEEE;
+  box-shadow: -5px -5px 5px #858585 inset;
+}
+
+.counter.blue {
+  background-image: url(./assets/blue.png);
+}
+.counter.blue::before {
+  background-color: #0045F3;
+  box-shadow: -5px -5px 5px #002A95 inset;
+}
+
+.counter.cyan {
+  background-image: url(./assets/cyan.png);
+}
+.counter.cyan::before {
+  background-color: #00F3B3;
+  box-shadow: -5px -5px 5px #00A479 inset;
+}
+
+.counter.green {
+  background-image: url(./assets/green.png);
+}
+.counter.green::before {
+  background-color: #00CE10;
+  box-shadow: -5px -5px 5px #00A20E inset;
+}
+.counter.red {
+  background-image: url(./assets/red.png);
+}
+.counter.red::before {
+  background-color: #FF0000;
+  box-shadow: -5px -5px 5px #AA0000 inset;
+}
+
+.counter.yellow {
+  background-image: url(./assets/yellow.png);
+}
+.counter.yellow::before {
+  background-color: #EFF300;
+  box-shadow: -5px -5px 5px #8F9500 inset;
+}

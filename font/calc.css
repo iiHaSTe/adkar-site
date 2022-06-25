@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Digital';
+  src: url("./Digital.ttf");
+}
+@font-face {
+  font-family: 'Digital';
+  src: url("./Digital-Italic.ttf");
+  font-style: italic;
+}
